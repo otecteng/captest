@@ -1,0 +1,61 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCars (20140422060824)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140422060824')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-04-22 14:08:53 +0800
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (4ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Processing by CarsController#index as HTML
+  [1m[36mCar Load (0.0ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+  Rendered cars/index.html.erb within layouts/application (3.1ms)
+Warning. Error encountered while saving cache /Users/tli/Documents/github/captest/tmp/cache/sass/204259d3b54e1481ac35c562777852637d05d6f0/cars.css.scssc: can't dump anonymous class #<Class:0x007fdcc4ef3c58>
+Compiled cars.css  (4ms)  (pid 72719)
+Warning. Error encountered while saving cache /Users/tli/Documents/github/captest/tmp/cache/sass/204259d3b54e1481ac35c562777852637d05d6f0/scaffolds.css.scssc: can't dump anonymous class #<Class:0x007fdcc4ef3c58>
+Compiled scaffolds.css  (6ms)  (pid 72719)
+Compiled application.css  (36ms)  (pid 72719)
+Compiled jquery.js  (2ms)  (pid 72719)
+Compiled jquery_ujs.js  (0ms)  (pid 72719)
+Compiled cars.js  (153ms)  (pid 72719)
+Compiled application.js  (195ms)  (pid 72719)
+Completed 200 OK in 311.3ms (Views: 277.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /cars.css - 200 OK (1ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /cars.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-22 14:08:55 +0800
+Served asset /application.js - 200 OK (3ms)
